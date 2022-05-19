@@ -35,6 +35,9 @@ app.post('/', (req, res) => {
 })
 
 // EDIT
+app.get('/:id/edit', (req, res) => {
+    res.send('you good?')
+})
 
 // SHOW
 app.get('/:id', (req, res) => {
