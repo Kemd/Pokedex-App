@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOW</title>
+</head>
+<body>
+
+    <h1><%= pokemon.name %></h1>
+    <a href="/"><button>Back to PokeList</button></a><br>
+    <br>
+    <!-- NEXT  -->
+    <Button>Next Pokemon</Button><br>
+
+    <img src="<%= pokemon.img %>">
+    <ul> Type:
+        <li><%= pokemon.type[0] %></li>
+        <li><%= pokemon.type[1] %></li>
+    </ul>
+    <ul> Moves
+        <li> <%= pokemon.moves.level[0].name %></li>
+        <li> <%= pokemon.moves.level[1].name %></li>
+    </ul>
+    <ul> Abilities
+        <li>hidden: <%= pokemon.misc.abilities.hidden %></li>
+        <li>normal: <%= pokemon.misc.abilities.normal %></li>
+    </ul>
+    <ul> Damages
+        <li>normal: <%= pokemon.damages.normal %></li>
+        <li>normal: <%= pokemon.damages.fire %></li>
+        <li>normal: <%= pokemon.damages.water %></li>
+        <li>normal: <%= pokemon.damages.ice %></li>
+    </ul>
+
+    <ul>Stats
+        <li>hp: <%= pokemon.stats.hp %></li>
+        <li>attack: <%= pokemon.stats.hp %></li>
+        <li>attack: <%= pokemon.stats.hp %></li>
+        <li>spattack: <%= pokemon.stats.hp %></li>
+        <li>spdefense: <%= pokemon.stats.hp %></li>
+        <li>speed: <%= pokemon.stats.hp %></li>
+    </ul>
+    
+</body>
+</html>
