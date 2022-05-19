@@ -1,6 +1,7 @@
 // dependencies
 const { clear } = require('console')
 const express = require('express')
+const methodOverride = require('method-override')
 const pokemons = require('./models/pokemon')
 // console.log(pokemon)
 
@@ -10,6 +11,10 @@ const port = 3000
 
 // MIDDLEMAN
 app.use(express.urlencoded({ extended: false}))
+
+// override form POST GET default
+app.use(methodOverride('_method'))
+
 
 // ROUTES Start
 
@@ -36,7 +41,10 @@ app.post('/', (req, res) => {
 
 // EDIT
 app.get('/:id/edit', (req, res) => {
-    res.send('you good?')
+    res.render('edit.ejs', {
+        pokemon: pokemons[req.params.id],
+        pokeedit: req.params.id
+    })
 })
 
 // SHOW
