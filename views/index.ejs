@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POKEMON</title>
 </head>
+
 <body>
 
     <h1>Gotta Catch Em ALL</h1>
+    <div class="container">
+        <% for (let i = 0; i < pokemons.length; i++) { %>
 
-    <% for (let i = 0; i < pokemons.length; i++) { %>
-        <div class="container">
-            <!-- Name  -->
-            
+        <!-- img  -->
+        <a href="/<%= i %>">
+            <h4><%= pokemons[i].name %></h4>
+            <img src="<%= pokemons[i].img %>">
+        </a>
+        <p><%= pokemons[i].type %></p>
 
-            <!-- img  -->
-            <a href="/<%= i %>">
-                <h4><%= pokemons[i].name %></h4>
-                <img src="<%= pokemons[i].img %>">
-            </a>
-            <p><%= pokemons[i].type %></p>
-            
-        </div>
+        <% } %>
+    </div>
 
 
-    <% } %>
 
-
-    
 </body>
+
 </html>
