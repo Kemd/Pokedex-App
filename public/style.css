@@ -1,7 +1,10 @@
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
+/* ====== GENERAL STYLING ====== */
+/* not specific to one page  */
 body {
     background-color: rgb(41, 40, 40);
     color: white;
@@ -13,22 +16,22 @@ img {
     height: 300px;
 }
 
+button {
+    padding: 10px;
+    margin-left: 10px;
+}
+
+/* ===== INDEX page Styles ====== */
 .container {
-    /* display: grid; */
-    /* grid-template-columns: 100px 100px 100px; */
-    gap: 5px;
-    /* height: 100%; */
+    display: grid;
 }
 
 .poke-container {
     border: 2px solid blue;
-    display: grid;
-    gap: 10px;
+    display: flex;
 }
 
+/* ====== Show Page styles ===== */
 .show-container {
     display: flex;
 }
-/* span > i {
-     color: greenyellow;
-} */

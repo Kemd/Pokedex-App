@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/style.css">
-    <title>POKEMON</title>
-</head>
+<!-- ============ HEAD ========= -->
+<%- include('./partials/head.ejs') %>
+<!-- ========= Head =========== -->
 
 <body>
 
@@ -16,12 +12,13 @@
     <div class="container">
         <% for (let i = 0; i < 15; i++) { %>
         <!-- img  -->
-        <div class="poke-container">
+
             <a href="/<%= i %>">
                 <h2><%= pokemons[i].name %></h2>
                 <img src="<%= pokemons[i].img %>">
             </a>
             <p><%= pokemons[i].type %> <span><i>type</i></span> pokemon</p>
+            <!-- JS -->
             <!-- delete form  override POST method required-->
             <form action="/<%=i; %>?_method=DELETE" method="POST">
                 <input type="submit" value="DELETE">
@@ -31,7 +28,6 @@
             <a href="/<%=i; %>/edit"><button>Edit</button></a>
 
             <% } %>
-        </div>
 
     </div>
 

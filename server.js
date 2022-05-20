@@ -22,12 +22,27 @@ app.use(methodOverride('_method'))
 
 // INDEX as HOMEPAGE
 app.get('/', (req, res) => {
-    res.render('index.ejs', { pokemons })
+    // JS to display one poke at a time
+        function changeClr() {
+            pokemons.forEach(pokemon => {
+                if (pokemon.name.includes('poison')) {
+                    document.querySelector('span > i')
+                        .style.backgroundColor = 'green'
+                        return
+                }
+            })
+        }
+    // js to display one pokemon at a time
+    res.render('index.ejs', { pokemons,
+    tabTitle: 'Index Page'})
+    changeClr()
 })
 
 // NEW - add form to new.ejs to add new pokemon POST
 app.get('/new', (req, res) => {
-    res.render('new.ejs')
+    res.render('new.ejs', {
+        tabTitle: 'New Page'
+    })
 })
 
 // DELETE
@@ -53,14 +68,16 @@ app.post('/', (req, res) => {
 app.get('/:id/edit', (req, res) => {
     res.render('edit.ejs', {
         pokemon: pokemons[req.params.id],
-        pokeedit: req.params.id
+        pokeedit: req.params.id,
+        tabTitle: 'Edit Page'
     })
 })
 
 // SHOW
 app.get('/:id', (req, res) => {
     res.render('show.ejs', {
-        pokemon: pokemons[req.params.id]
+        pokemon: pokemons[req.params.id],
+        tabTitle: 'Show Page'
     })
 })
 
