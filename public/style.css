@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(41, 40, 40);
+    width: 100vw;
+    height: 100vh;
+}
+
+img {
+    border-radius: 30%;
+    width: 100px;
+    height: 100px;
+}
+
+.container {
+    border: solid 2px blue;
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 200px);
+}
+
+.inner-container {
+    border: solid 2px red;
+    width: 100%;
+    
+}
