@@ -1,6 +1,7 @@
 // dependencies
 const { clear } = require('console')
 const express = require('express')
+const res = require('express/lib/response')
 const methodOverride = require('method-override')
 const pokemons = require('./models/pokemon')
 // console.log(pokemon)
@@ -30,13 +31,21 @@ app.get('/new', (req, res) => {
 })
 
 // DELETE
+app.delete('/:id', (req, res) => {
+    pokemons.splice(req.params.id)
+    res.redirect('/')
+})
 
-// UPDATE
+// UPDATE w/ put
+app.put('/', () => {
+    pokemons[req.params.id] = req.body
+    res.redirect('/')
+})
 
 // CREATE with POST
 app.post('/', (req, res) => {
     pokemons.push(req.body)
-    console.log(req.body)
+    // console.log(pokemons)
     res.redirect('/')
 })
 
@@ -56,7 +65,6 @@ app.get('/:id', (req, res) => {
 })
 
 // ROUTES END
-
 app.listen(port, () => {
     console.log('port', port, 'active')
 })

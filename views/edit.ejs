@@ -10,8 +10,8 @@
 <body>
     <h1>Pokedit</h1>
     <form action="/<%=pokeedit%>?_method=PUT" method="post">
-        <input type="text" name="name" value="<%= pokemon.name %>"><br>
-        <input type="text" name="type" value="<%= pokemon.type %>"><br>
+        <input type="text" name="name" value="<%=pokemon.name%>"><br>
+        <input type="text" name="type" value="<%=pokemon.type%>"><br>
         <input type="submit" value="Submit">
     </form>
     
