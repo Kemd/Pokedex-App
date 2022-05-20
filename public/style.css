@@ -17,19 +17,19 @@ img {
 }
 
 button {
-    padding: 10px;
+    /* padding: 2px; */
     margin-left: 10px;
+    border-radius: 25%;
 }
 
 /* ===== INDEX page Styles ====== */
-.container {
+.index-container {
+    border: solid 2px red;
     display: grid;
+    justify-content: center;
+    align-content: center;
 }
 
-.poke-container {
-    border: 2px solid blue;
-    display: flex;
-}
 
 /* ====== Show Page styles ===== */
 .show-container {

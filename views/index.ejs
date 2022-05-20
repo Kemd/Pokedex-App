@@ -9,25 +9,25 @@
 
     <h1>Gotta Catch Em ALL</h1>
     <a href="/new"><button>Create Pokemon</button></a>
-    <div class="container">
-        <% for (let i = 0; i < 15; i++) { %>
-        <!-- img  -->
 
-            <a href="/<%= i %>">
-                <h2><%= pokemons[i].name %></h2>
-                <img src="<%= pokemons[i].img %>">
-            </a>
-            <p><%= pokemons[i].type %> <span><i>type</i></span> pokemon</p>
-            <!-- JS -->
-            <!-- delete form  override POST method required-->
-            <form action="/<%=i; %>?_method=DELETE" method="POST">
-                <input type="submit" value="DELETE">
-            </form>
+    <% for (let i = 0; i < 15; i++) { %>
+    <div class="index-container">
+        <a href="/<%= i %>">
+            <h2><%= pokemons[i].name %></h2>
+            <img src="<%= pokemons[i].img %>">
+        </a>
+        <!-- <p><%= pokemons[i].type %> <span><i>type</i></span> pokemon</p> -->
 
-            <!-- ======== Edit link ========== -->
-            <a href="/<%=i; %>/edit"><button>Edit</button></a>
+        <!-- delete form  override POST method required-->
+        <form action="/<%=i; %>?_method=DELETE" method="POST">
+            <input type="submit" value="DELETE">
+        </form>
 
-            <% } %>
+        <!-- ======== Edit link ========== -->
+        <a href="/<%=i; %>/edit"><button>Edit</button></a>
+    </div>
+
+    <% } %>
 
     </div>
 
