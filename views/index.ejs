@@ -14,13 +14,16 @@
     <h1>Gotta Catch Em ALL</h1>
     <div class="container">
         <% for (let i = 0; i < 5; i++) { %>
-        <div class="inner-container">
             <!-- img  -->
+        <div class="poke-container">
             <a href="/<%= i %>">
-                <h4><%= pokemons[i].name %></h4>
+                <h2><%= pokemons[i].name %></h2>
                 <img src="<%= pokemons[i].img %>">
             </a>
-            <p><%= pokemons[i].type %></p>
+            <p><%= pokemons[i].type %> <span><i>type</i></span> pokemon</p>
+            <% if (pokemons[i].type.includes('grass') || pokemons[i].type.includes('poison')) { %>
+                <%= span.style.color = 'green' %>
+            <% } %>
 
             <% } %>
         </div>
