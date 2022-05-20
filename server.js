@@ -22,7 +22,7 @@ app.use(methodOverride('_method'))
 
 // INDEX as HOMEPAGE
 app.get('/', (req, res) => {
-    // JS to display one poke at a time
+    // JS to changeclr text one poke at a time
         function changeClr() {
             pokemons.forEach(pokemon => {
                 if (pokemon.name.includes('poison')) {
