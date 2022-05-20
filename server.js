@@ -32,12 +32,12 @@ app.get('/new', (req, res) => {
 
 // DELETE
 app.delete('/:id', (req, res) => {
-    pokemons.splice(req.params.id)
+    pokemons.splice(req.params.id, 1)
     res.redirect('/')
 })
 
 // UPDATE w/ put
-app.put('/', () => {
+app.put('/:id', (req, res) => {
     pokemons[req.params.id] = req.body
     res.redirect('/')
 })

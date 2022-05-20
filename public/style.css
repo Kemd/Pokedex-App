@@ -14,9 +14,16 @@ img {
 }
 
 .container {
-    display: grid;
+    /* display: grid; */
+    /* grid-template-columns: 100px 100px 100px; */
     gap: 5px;
-    height: 100%;
+    /* height: 100%; */
+}
+
+.poke-container {
+    border: 2px solid blue;
+    display: grid;
+    gap: 10px;
 }
 
 .show-container {
