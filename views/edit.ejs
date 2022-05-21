@@ -8,9 +8,13 @@
 <body>
     <h1>Pokedit</h1>
     <form action="/<%=pokeedit%>?_method=PUT" method="POST">
-        <input type="text" name="name" value="<%=pokemon.name%>"><br>
-        <input type="text" name="type" value="<%=pokemon.type%>"><br>
-        <input type="submit" value="Submit">
+        <input type="text" name="name" value="<%=pokemon.name%>" /><br>
+        <input type="text" name="type" value="<%=pokemon.type%>" /><br>
+        Image: <input type="file" name="image" id="image_input" value="<%=pokemon.img%>" /><br>
+        <div class="editimage">
+            <img src="<%=pokemon.img%>" />
+        </div>
+        <input type="submit" value="Submit" />
     </form>
     
 </body>
