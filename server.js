@@ -1,9 +1,16 @@
 // dependencies
 const { clear } = require('console')
+const { shallowCopy } = require('ejs/lib/utils')
 const express = require('express')
 const res = require('express/lib/response')
 const methodOverride = require('method-override')
 const pokemons = require('./models/pokemon')
+
+
+// === Random pokemon for show.ejs
+const nextPokemon = pokemons[Math.floor(Math.random() * pokemons.length)]
+console.log(nextPokemon)
+
 // console.log(pokemon)
 
 const app = express()
@@ -24,7 +31,6 @@ app.use(methodOverride('_method'))
 app.get('/', (req, res) => {
     res.render('index.ejs', { pokemons,
     tabTitle: 'Index Page'})
-    changeClr()
 })
 
 // NEW - add form to new.ejs to add new pokemon POST

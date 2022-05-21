@@ -10,7 +10,7 @@
     <h1>Gotta Catch Em ALL</h1>
     <a href="/new"><button>Create Pokemon</button></a>
 
-    <% for (let i = 0; i < 15; i++) { %>
+    <% for (let i = 0; i < pokemons.length; i++) { %>
     <div class="index-container">
         <a href="/<%= i %>">
             <h2><%= pokemons[i].name %></h2>

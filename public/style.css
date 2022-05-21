@@ -12,8 +12,11 @@ body {
 
 img {
     border-radius: 30%;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
+}
+img .editimage {
+    width: 10px;
 }
 
 button {
