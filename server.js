@@ -22,17 +22,6 @@ app.use(methodOverride('_method'))
 
 // INDEX as HOMEPAGE
 app.get('/', (req, res) => {
-    // JS to changeclr text one poke at a time
-        function changeClr() {
-            pokemons.forEach(pokemon => {
-                if (pokemon.name.includes('poison')) {
-                    document.querySelector('span > i')
-                        .style.backgroundColor = 'green'
-                        return
-                }
-            })
-        }
-    // js to display one pokemon at a time
     res.render('index.ejs', { pokemons,
     tabTitle: 'Index Page'})
     changeClr()
