@@ -48,7 +48,7 @@ app.put('/:id', (req, res) => {
 
 // CREATE with POST
 app.post('/', (req, res) => {
-    pokemons.push(req.body)
+    pokemons.unshift(req.body)
     // console.log(pokemons)
     res.redirect('/')
 })
