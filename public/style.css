@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
 /* ====== GENERAL STYLING ====== */
@@ -8,6 +9,11 @@
 body {
     background-color: rgb(41, 40, 40);
     color: white;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
 }
 
 img {
@@ -20,21 +26,51 @@ img .editimage {
 }
 
 button {
-    /* padding: 2px; */
     margin-left: 10px;
     border-radius: 25%;
 }
 
+.flex-btn {
+    display: flex;
+    justify-content: space-around;
+}
+
+ul {
+    color: cyan;
+}
+
+ul li {
+    text-decoration: none;
+    list-style: none;
+}
+
+
 /* ===== INDEX page Styles ====== */
+
+.main-index {
+    width: 100%;
+    max-height: 85vh;
+    overflow: hidden scroll;
+    text-align: center;
+}
+
 .index-container {
-    border: solid 2px red;
-    display: grid;
-    justify-content: center;
-    align-content: center;
+    display: inline-block;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 10px;
+    background-color: rgb(63, 59, 59);
+}
+
+.btn-over {
+    font-size: 20px;
+    margin: 10px;
 }
 
 
 /* ====== Show Page styles ===== */
 .show-container {
     display: flex;
+    justify-content: space-around;
 }

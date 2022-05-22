@@ -6,11 +6,6 @@ const res = require('express/lib/response')
 const methodOverride = require('method-override')
 const pokemons = require('./models/pokemon')
 
-
-// === Random pokemon for show.ejs
-const nextPokemon = pokemons[Math.floor(Math.random() * pokemons.length)]
-console.log(nextPokemon)
-
 // console.log(pokemon)
 
 const app = express()

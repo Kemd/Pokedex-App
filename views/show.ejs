@@ -7,13 +7,15 @@
 
 <body>
 
-    <h1><%= pokemon.name %></h1>
+    <h1></h1>
     <a href="/"><button>Back to PokeList</button></a><br>
     <br>
     <!-- NEXT  -->
     <a href="/new"><button>Create a Pokemon</button></a>
-    <Button id="changePoke">Next Pokemon</Button>
+    <Button id="changePoke" onclick="changePokemon()">Next Pokemon</Button>
     <hr>
+
+
 
     <div class="show-container">
 
@@ -57,11 +59,13 @@
     </div>
 
 
-<!-- ==== JS button listener to switch to next poke on click ====  -->
+    <!-- ==== JS button listener to switch to next poke on click ====  -->
     <script>
-        document.getElementById('changePoke').addEventListener('click', () => {
-            document.querySelector('img').src = 'pokemon.img'
-        })
+        function changePokemon() {
+            // === Random pokemon for show.ejs
+            const nextPokemon = pokemons[Math.floor(Math.random() * pokemons.length)]
+                document.querySelector('h1').innerHTML = '<h1><%= pokemon.name %></h1>'
+        }
     </script>
 
 </body>
